@@ -34,6 +34,7 @@ export class Image {
     this.canvasData.pixels[offset + 3] = 255;
   }
 
+  /* TODO: abstract this out into React so that it handles updating the canvas in the DOM */
   renderInto(element: HTMLElement): void {
     this.canvasData.context.putImageData(this.canvasData.imageData, 0, 0);
 
