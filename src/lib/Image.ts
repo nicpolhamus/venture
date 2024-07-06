@@ -25,7 +25,7 @@ export class Image {
     return { canvas, context, imageData, pixels };
   }
 
-  putPixel(x: number, y: number, color: Color): void {
+  public putPixel(x: number, y: number, color: Color): void {
     const offset = (y * this.width + x) * 4;
 
     this.canvasData.pixels[offset] = color.red | 0;
